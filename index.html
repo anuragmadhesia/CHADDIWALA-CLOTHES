@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/circle-icon.png" type="image/gif" sizes="16x16">
+    <title>CHADDIWALA CLOTHES</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <div class="info">
+        <div class="email">
+            <p>Email id. chaddiwala01@gmail.com</p>
+        </div>
+        <div class="num">
+            <a href="#" style="color: #000;">WHATSAPP&nbsp;NUMBER</a>
+            <a target="blank" href="https://api.whatsapp.com/send?phone=+917317367018">+91&nbsp;7317367018</a>
+            <a target="blank" href="https://api.whatsapp.com/send?phone=+919119838577">+91&nbsp;9119838577</a>
+            <a target="blank" href="https://api.whatsapp.com/send?phone=+918417065170">+91&nbsp;8417065170</a>
+        </div>
+      </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/logo.jpeg" alt="LOGO">
+        </div>
+        <div class="title">
+            <h1>CHADDIWALA&nbsp;CLOTHES</h1>
+            <p>FAZILNAGAR KUSHINAGAR UTTAR PRADESH PIN CODE 274401</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="slogo">
+            <img src="img/logo.jpeg" alt="LOGO">
+        </div>
+        <a href="#home">home</a>
+        <a href="#shop">Shop&nbsp;items</a>
+        <a href="#about">about&nbsp;us</a>
+        <a href="#contact">contact&nbsp;us</a>
+    </div>
+
+    <!-- The flexible grid (content) -->
+    <div class="row" id="home">
+        <div class="side">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h3>More Text</h3>
+            <p>Lorem ipsum dolor sit ame.</p>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div><br>
+            <div class="fakeimg" style="height:60px;">Image</div>
+        </div>
+        <div class="main">
+            <h2>TITLE HEADING</h2>
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="img/1.jpg" style="width:100%">
+                      <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="img/2.jpg" style="width:100%">
+                      <div class="text">Caption Two</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="img/3.jpg" style="width:100%">
+                      <div class="text">Caption Three</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    </div>
+                    <br>
+
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span>
+                      <span class="dot" onclick="currentSlide(2)"></span>
+                      <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <a href="https://github.com/anuragmadhesia">Designed & Developed By Anurag Madhesia</a>
+    </div>
+
+    <!-- Go Top BTN -->
+    <button class="goTop">&#8679;</button>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+
+</html>

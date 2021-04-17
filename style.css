@@ -229,7 +229,69 @@
     justify-content: center;
     align-items: center;
   }
+  .fakeimg p{
+    font-family: 'Orelega One', cursive;
+    font-size: 20px;
+    font-weight: 400;
+  }
 
+/* shop container */
+#shop{
+  min-height: 650px;
+  background-color: aqua;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#shop h1{
+  padding-top: 100px;
+}
+  .shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .shop > div {
+    background-color: #aaa;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+  }
+  .shop img{
+    width: 100%;
+    height: 80%;
+  }
+  .t,.h{
+    width: 100%;
+    height: 20%;
+  }
+  .shop_img{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10);
+  }
+  .shop_img:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .t{
+    flex: 80%;
+    text-align: start;
+  }
+  .h{
+    flex: 20%;
+    padding: 0 10px 0 0;
+  }
+  .t h5{
+    margin: 10px 0 0 10px;
+  }
+  .t p{
+    margin: 8px 0 0 10px;
+  }
+  .h h4{
+    border: 1px solid red;
+    border-radius:50%;
+  }
   /* Footer */
   .footer {
     padding: 20px;
@@ -285,5 +347,28 @@
         position: absolute;
         top: 10px;
         right: 20px;
+      }
+      .fakeimg p{
+        font-size: 15px;
+        font-weight: 400;
+      }
+      .shop > div {
+        width: 150px;
+        height: 200px;
+        margin: 10px;
+      }
+      .shop img{
+        width: 100%;
+        height: 80%;
+      }
+      .t h5{
+        font-size: 10px;
+        margin-top: 8px;
+      }
+      .t p{
+        font-size: 8px;
+      }
+      .h h4{
+        margin: 9px 0 0 0;
       }
   }

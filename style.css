@@ -19,6 +19,7 @@
   }
   body{
     margin: 0;
+    padding: 0;
     font-family: 'Lato', sans-serif;
   }
 
@@ -100,15 +101,6 @@
     .slogo{
         display: none;
     }
-
-
-/*MAin content start*/
-.row {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
 
 
 
@@ -200,22 +192,28 @@
 
 
 
-
+/*MAin content start*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
   /* Create two unequal columns that sits next to each other */
   /* Sidebar/left column */
   .side {
     flex: 30%;
-    background-color: #f1f1f1;
-    padding: 105px 20px 30px 20px;
+    background-color: #8b8a8a;
+    padding: 15px 20px 30px 20px;
     text-align: center;
   }
-
   /* Main column */
   .main {
     flex: 70%;
-    background-color: white;
-    padding: 105px 20px 30px 20px;
+    background-color: rgb(209, 206, 206);
+    padding: 15px 20px 30px 20px;
     text-align: center;
+  }
+  .offscrolll .side,.offscrolll .main{
+    padding: 105px 20px 30px 20px;
   }
    .side h2, .main h2{
        padding-bottom: 10px;
@@ -238,12 +236,13 @@
 /* shop container */
 #shop{
   min-height: 650px;
-  background-color: aqua;
+  background-color: rgb(240, 237, 237);
   text-align: center;
   padding-bottom: 30px;
 }
 #shop h1{
-  padding-top: 100px;
+  margin: 0 0 20px 0;
+  padding-top: 130px
 }
   .shop {
     display: flex;
@@ -292,6 +291,106 @@
     border: 1px solid red;
     border-radius:50%;
   }
+
+  /* about us */
+#about{
+  min-height: 650px;
+  background-color: rgb(228, 228, 228);
+  text-align: center;
+  padding-bottom: 30px;
+}
+#about h1{
+  margin: 0 0 20px 0;
+  padding-top: 130px;
+}
+  .about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about > div {
+    background-color: #f4f4f4;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+  }
+  .about p{
+    font-size: 13px;
+    margin: 10px;
+  }
+
+  /* contact */
+  #contact{
+    background-color: #ccc;
+    text-align: center;
+  }
+  #contact h1{
+    margin-bottom: 20px;
+    padding-top: 90px
+  }
+  .contact{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .msg{
+    flex: 50%;
+    background-color: rgb(238, 130, 130);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 0 20px 180px;
+  }
+  .msg input{
+    width: 300px;
+    height: 20px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: none;
+    outline: none;
+  }
+  .msg textarea{
+    width: 300px;
+    height: 70px;
+    margin: 20px 0;
+    border: none;
+    border-bottom: 2px solid #000;
+    background: none;
+    outline: none;
+  }
+  .msg button{
+    margin-top: 15px;
+    font-size: 15px;
+    background-color: goldenrod;
+    width: 100px;
+    outline: none;
+  }
+  .id{
+    flex: 50%;
+    background-color: violet;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px 0 20px 180px;
+  }
+  .id h2{
+    border-left: 3px solid black;
+    padding-left: 10px;
+  }
+  .id a{
+    text-decoration: none;
+    color: rgb(92, 47, 255);
+    margin: 5px 20px;
+  }
+  .id iframe{
+    width: 240px;
+    height: 120px;
+  }
   /* Footer */
   .footer {
     padding: 20px;
@@ -318,13 +417,16 @@
     outline: none;
     display: none;
   }
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  /* Responsive layout */
   @media screen and (max-width: 700px) {
     .row{
       flex-direction: column;
     }
-    .side, .main{
+    .offscrolll .side,.offscrolll .main{
         padding-top: 50px;
+    }
+    .main h2{
+      font-size: 17px;
     }
     .header{
         font-size: 6px;
@@ -352,6 +454,10 @@
         font-size: 15px;
         font-weight: 400;
       }
+      #shop h1{
+        margin-bottom: 5px;
+        padding-top: 60px
+      }
       .shop > div {
         width: 150px;
         height: 200px;
@@ -369,7 +475,32 @@
         font-size: 8px;
       }
       .h h4{
-        font-size: 10px;
+        font-size: 14px;
         margin: 9px 0 0 0;
+      }
+      #about h1{
+        margin-bottom: 5px;
+        padding-top: 60px
+      }
+      #contact h1{
+        margin-bottom: 20px;
+        padding-top: 70px
+      }
+      .contact{
+        flex-direction: column;
+      }
+      .msg{
+        padding: 40px 0 80px 50px;
+      }
+      .msg input{
+        width: 250px;
+        height: 15px;
+      }
+      .msg textarea{
+        width: 250px;
+        height: 50px;
+      }
+      .id{
+        padding: 50px 0 50px 50px;
       }
   }

@@ -376,7 +376,7 @@
   .msg input{
     width: 300px;
     height: 20px;
-    margin: 10px 0;
+    margin: 40px 0;
     border: none;
     border-bottom: 2px solid #000;
     background: none;
@@ -385,11 +385,16 @@
   .msg textarea{
     width: 300px;
     height: 70px;
-    margin: 20px 0;
+    margin: 30px 0;
     border: none;
     border-bottom: 2px solid #000;
     background: none;
     outline: none;
+  }
+  .msg input::placeholder,.msg textarea::placeholder{
+    font-size: 18px;
+    font-weight: 300;
+    color: #000;
   }
   .msg button{
     margin-top: 15px;
@@ -528,6 +533,11 @@
       .msg textarea{
         width: 250px;
         height: 50px;
+      }
+      .msg input::placeholder,.msg textarea::placeholder{
+        font-size: 15px;
+        font-weight: 300;
+        color: #000;
       }
       .id{
         padding: 50px 0 50px 50px;

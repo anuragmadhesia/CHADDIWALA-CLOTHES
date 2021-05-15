@@ -55,7 +55,7 @@
       transform: rotate(360deg);
     }
   }
-
+/* main content */
   .info{
     display: flex;
     font-weight: 500;
@@ -218,11 +218,6 @@
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
-
-
-
-
-
 
 
 /*MAin content start*/
@@ -453,6 +448,12 @@
   }
   /* Responsive layout */
   @media screen and (max-width: 700px) {
+    /* preloder */
+    #loading span{
+      position: relative;
+      height: 65px;
+      width: 65px;
+    }
     .row{
       flex-direction: column;
     }

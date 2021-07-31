@@ -236,10 +236,12 @@
       <div class="contact">
         <div class="msg">
           <h1>Send Us Message</h1>
-          <input type="text" placeholder="Name" autocomplete="off" required />
-          <input type="email" placeholder="Email" autocomplete="off" required />
-          <textarea placeholder="Message"></textarea>
-          <button>SEND</button>
+          <form method="POST" autocomplete="off" id="myForm" name="google-sheet">
+            <input type="text" placeholder="Name" name="Name" autocomplete="off" value="" required />
+            <input type="email" placeholder="Email" name="Email" autocomplete="off" value="" required />
+            <textarea placeholder="Message" name="Message"></textarea>
+            <input type="submit" name="submit" id="submit_btn" value="SUBMIT">
+          </form>
         </div>
 
         <div class="id">
@@ -271,6 +273,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script src="script.js"></script>
   <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwW_laZKjA7yj2JoSWMHy8l3vcy_CgQ2vHJDZMk3mfnNYQPODB98nCSC--YPrH3J-XfSg/exec'
+    const form = document.forms['google-sheet']
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+        alert("Thanks for Contacting us..! We Will Contact You Soon...");
+        document.getElementById("myForm").reset();}
+        )
+        .catch(error => console.error('Error!', error.message))
+    })
 
     var preloader = document.getElementById("loading");
 

@@ -391,12 +391,12 @@
     font-weight: 300;
     color: #000;
   }
-  .msg button{
-    margin-top: 15px;
-    font-size: 15px;
-    background-color: goldenrod;
-    width: 100px;
-    outline: none;
+  #submit_btn{
+    background-color: rgb(211, 20, 20);
+    margin-top: 10px;
+    padding: 10px;
+    line-height: 5px;
+    border-radius: 45px;
   }
   .id{
     flex: 50%;
